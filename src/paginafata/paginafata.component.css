@@ -1,0 +1,36 @@
+.container{
+    display: flex;
+    justify-content:center ;  
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+}
+.container > *{
+    min-width: 25rem;
+    max-width: 40rem;
+}
+img{
+    border-radius: 3rem;
+    flex:1 0;
+    object-fit: cover;
+    
+}
+.details{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    flex:1 0;
+    border-radius: 3rem;
+    padding: 2rem;
+    color:#e96196;
+    margin-left:1rem;
+}
+.details .name{
+    font-size: 1rem;
+    font-weight: bold;
+}
+.details .price{
+    font-size: 1rem;
+    margin:2rem 2rem 2rem 0;
+    color:#e96196;
+}

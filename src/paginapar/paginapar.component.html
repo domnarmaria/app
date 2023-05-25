@@ -1,0 +1,24 @@
+<div class="container">
+    <img [src]="par.imageUrl" [alt]="par.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{par.name}}
+            </span>
+        </div>
+        <div class="price">
+           <span>{{par.price}} lei </span>
+        </div>
+        <div class="descriere">
+            <span>{{par.descriere}}</span>
+        </div>
+        <br>
+         <div class="cart">
+        <button (click)="addTocart()" mat-icon-button routerLink="/cumparaturi">
+        <mat-icon>shopping_cart</mat-icon>
+         </button>
+        </div>
+    </div>
+   
+</div>
+

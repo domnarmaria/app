@@ -1,0 +1,27 @@
+<ul>
+    <li *ngFor="let p of Par">
+        <a routerLink="/par/{{p.id}}">
+              <img src="{{p.imageUrl}}" alt="">
+              <div class="content">
+                <div class="name">
+                    {{p.name}}
+                </div>
+                <div class="price">
+                    
+                     {{p.price}} lei
+                   
+                </div>
+               
+                
+
+              </div>
+        </a>
+      
+    </li>
+</ul>
+
+
+
+
+
+

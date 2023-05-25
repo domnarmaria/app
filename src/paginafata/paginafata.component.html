@@ -1,0 +1,24 @@
+<div class="container">
+    <img [src]="fata.imageUrl" [alt]="fata.name">
+    <div class="details">
+        <div class="header">
+            <span class="name">
+                {{fata.name}}
+            </span>
+        </div>
+        <div class="price">
+           <span>{{fata.price}} lei </span>
+        </div>
+        <div class="descriere">
+            <span>{{fata.descriere}}</span>
+        </div>
+        <br>
+         <div class="cart">
+        <button (click)="addTocart()" mat-icon-button routerLink="/cumparaturi">
+        <mat-icon>shopping_cart</mat-icon>
+         </button>
+        </div>
+    </div>
+   
+</div>
+

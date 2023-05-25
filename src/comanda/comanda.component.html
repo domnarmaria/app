@@ -1,0 +1,48 @@
+  <h3 class="trimite">Trimite comanda<h3>
+    <div class="container">
+
+    <form [formGroup]="comandaForm" class="form-group">
+      <mat-form-field appearance="fill">
+            
+        <mat-label>Nume</mat-label>
+        <input matInput formControlName="Nume">
+      </mat-form-field>
+    
+      <small *ngIf="comandaForm.get('Nume')!.invalid && comandaForm.get('Nume')!.touched">Este cerut nume</small>
+
+    
+      <mat-form-field appearance="fill">
+        
+    <mat-label>Prenume</mat-label>
+    <input matInput formControlName="Prenume">
+    </mat-form-field>
+    
+    <small *ngIf="comandaForm.get('Prenume')!.invalid && comandaForm.get('Prenume')!.touched">Este cerut prenume</small>
+
+    <mat-form-field appearance="fill">
+        
+    <mat-label>Număr de telefon</mat-label>
+    <input matInput formControlName="Numardetelefon">
+    </mat-form-field>
+      
+    <small *ngIf="comandaForm.get('Numardetelefon')!.invalid && comandaForm.get('Numardetelefon')!.touched">Este cerut număr de telefon</small>
+
+      <mat-form-field appearance="fill">
+          
+        <mat-label>Adresa</mat-label>
+        <textarea matInput formControlName="Adresa"></textarea>
+      </mat-form-field>
+
+      <small *ngIf="comandaForm.get('Adresa')!.invalid && comandaForm.get('Adresa')!.touched">Este cerută adresă</small>
+    
+      <mat-form-field appearance="fill">
+         
+        <mat-label>Nume produse</mat-label>
+        <textarea matInput formControlName="Numeproduse"></textarea>
+      </mat-form-field>
+    
+      <button type="reset"  mat-raised-button color="primary" [disabled]="comandaForm.invalid" (click)="submitData(comandaForm.value)">Trimite</button>
+      <p *ngIf="isSubmit" class="submitMessage">{{submitMessage}}</p>
+    </form>
+    </div>
+<p class="text">Plata se poate face doar ramburs la primirea coletului.</p>

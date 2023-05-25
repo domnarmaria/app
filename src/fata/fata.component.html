@@ -1,0 +1,16 @@
+<ul>
+    <li *ngFor="let f of Fata">
+        <a routerLink="/fata/{{f.id}}">
+              <img src="{{f.imageUrl}}" alt="">
+              <div class="content">
+                <div class="name">
+                    {{f.name}}
+                </div>
+                <div class="price">
+                     {{f.price}} lei
+                </div>
+              </div>
+        </a>
+      
+    </li>
+</ul>

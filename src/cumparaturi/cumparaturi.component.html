@@ -1,0 +1,46 @@
+<app-nimic [visible]="!cart || cart.produse.length<=0"
+    notfoundmessage="Coșul de cumpărături este gol!"
+    resetlinktext="Continuă cumpărăturile"
+></app-nimic>
+
+<div *ngIf="cart && cart.produse.length>0" class="container">
+    <ul>
+        <li *ngFor="let cartitem of cart.produse">
+            <div>
+                <img [src]="cartitem.fprod.imageUrl" [alt]="">
+            </div>
+            <div >
+                
+                    {{cartitem.fprod.name}}
+                
+                
+            </div>
+           <div>
+            <select #quantitySelect (change)="changecantitate(cartitem,quantitySelect.value)">
+               <option>1</option>
+               <option>2</option>
+               <option>3</option>
+               <option>4</option>
+               <option>5</option>
+            </select>
+           </div>
+           <div>
+            {{cartitem.pretf}} lei
+           </div>
+           <div>
+            <button class="remove-button" (click)="removeFromcart(cartitem)">
+                Remove
+            </button>
+           </div>
+        </li>
+    </ul>
+    <div class="checkout">
+        <div>
+            <div class="prod-count">{{cart.produse.length}}</div>
+            <div class="total-price">{{cart.prettotal}} lei </div>
+        </div>
+        <button class="cumpara" routerLink="/comanda">Plasează comanda</button>
+    </div>
+    
+</div>
+
